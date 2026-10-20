@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định nghĩa các biến màu */
+
+:root {
+    --color-bg: #fffaf3; /* Màu nền trang */
+    --color-text: #2b2118; /* Màu chữ */
+    --block-bg: #e7d9c8; /* Màu nền khối */
+    --card-bg: #ffffff; /* Màu nền thẻ */
+    --border-card: #8b4513; /* Màu viền thẻ và nền nút */
+    --title: #5c2e0e; /* Màu tiêu đề và tên ưu đãi */
+    --label: #d97706; /* Màu nhãn ưu đãi */
+    --description: #7a6a5a; /* Mô tả */
+}
+
+body {
+    font-family: Arial;
+    background-color: var(--color-bg);
+}
+
+/* Toàn bộ block ưu đãi */
+.block{
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto; /* Căn giữa trang*/
+    margin-top: 32px; /* Cách mép trên*/
+    padding: 24px; /* Đệm 24px bốn phía */
+    background-color: var(--block-bg); /* Màu nền khối */
+}
+
+h1 {
+    font-size: 24px; /* Cỡ chữ 24px in đậm*/
+    margin-bottom: 16px; /* Cách thẻ đầu 16px */
+    color: var(--title); /* Màu chữ tiêu đề */
+}
+
+/* Design từng block ưu đãi */
+.box {
+    background-color: var(--card-bg); /* Màu nền thẻ */
+    width: 100%;
+    max-width: 432px;
+    border: 2px solid var(--border-card); /* Viền 2px solid màu nâu */
+    border-radius: 12px; /* Bo 12px */
+    padding: 20px; /* Đệm 20px */
+    box-shadow: 0 4px 12px rgba(43, 33, 24, 0.15); /* Lệch ngang 0, lệch dọc 4px, độ nhòe 12px, độ mờ 15% */
+    margin-bottom: 16px; /* Hai thẻ cách nhau 16px */
+}
+
+.label {
+    display: block; /* Hiển thị nhãn ưu đãi nằm gọn 1 dòng */
+    width: fit-content; /* Nhãn chỉ rộng vừa đủ nội dung*/
+    height: 28px; /* Chiều cao 28px */
+    padding: 6px 12px; /* Đệm 6px trên dưới 12px trái phải */
+    border-radius: 16px; /* Bo tròn 16px */
+    background-color: var(--label); /* Màu nền nhãn */
+    color: var(--card-bg); /* Màu chữ nhãn */
+    font-size: 14px; /* Cỡ chữ 14px */
+    font-weight: bold; /* in đậm */
+    margin-bottom: 12px; /* Cách tên ưu đãi 12px */
+}
+
+h2 {
+    font-size: 20px; /* Cỡ chữ 20px in đậm */
+    color: var(--title); /* Màu chữ tiêu đề*/
+    margin-bottom: 8px; /* Cách dòng mô tả 8px */
+}
+
+p {
+    font-size: 14px; /* Cỡ chữ 14px */
+    color: var(--description); /* Màu chữ mô tả */
+    margin-bottom: 16px; /* Cách nút 16px */
+}
+
+.button {
+    max-width: 388px;
+    width: 100%;
+    height: 42px;
+    border-radius: 8px; /* Bo góc 8px */
+    background-color: var(--border-card); /* Màu nền nâu */
+    color: var(--card-bg); /* Màu chữ trắng*/
+    font-size: 16px; /* Cỡ 16px */
+    font-weight: bold; /* in đậm  */
+    border-style: none; /* Loại bỏ viền nút */
+    transition: all 0.2s ease; /* Tạo hiệu ứng lún 2mm trong 0.2 giây */
+    display: flex;
+    align-items: center;     /* Căn giữa dọc */
+    justify-content: center; /* Căn giữa ngang */
+    text-decoration: none; /* Bỏ gạch chân mặc định của thẻ a */
+}
+
+.button:hover {
+    background-color: var(--title); /* Nền đổi khi rê chuột */
+}
+
+.button:focus {
+    background-color: var(--title); /* Nền đổi khi nhấn tab */
+    outline: 3px solid var(--label); /* Tạo viền 3px */
+}
+
+@media (max-width: 480px) {
+    .block {
+        margin-top: 0;
+        width: 100%;
+    }
+}
